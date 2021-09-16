@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1</title>
+    <link rel="shortcut icon" type="image/jpg" href="/assets/img/logo.jpg">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=a9a31ec932de3114d9b1ed27688edc60">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css" />
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- ===== CSS ===== -->
+    <!-- <link rel="stylesheet" href="/assets/css/styles.css"> -->
+
+    <!-- Icon link added -->
+    <script src="https://kit.fontawesome.com/c598047e8f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        /* .container-fluid {
+            padding: 3% 7%;
+            background-color: cornflowerblue;
+        } */
+
+        /* @media screen and (max-width: 572px) {
+            #myInput {
+                width: 103% !important;
+                margin-bottom: 1rem;
+            }
+        } */
+
+        .sidebar .nav-item .nav-link[data-toggle=collapse]:after {
+            width: 1rem;
+            text-align: center;
+            float: right;
+            vertical-align: 0;
+            border: 0;
+            font-weight: 900;
+            content: "\f107";
+            font-family: Font Awesome\ 5 Free;
+        }
+
+        #collapseA:after,
+        #collapseB:after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+
+        accordionSidebar {
+            padding-right: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        #accordionSidebar a:hover {
+            color: #ED2124 !important;
+        }
+
+        #accordionSidebar a {
+            color: #ffffffcc !important;
+        }
+
+        #accordionSidebar a.active {
+            /* background-color: #ccc; */
+            color: white !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar accordion p-0" id="sidebar"
+            style="background-color: black; transition: 0.5s;">
+            <div class="container-fluid d-flex flex-column p-0" style="margin-top: 0rem!important;">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="">
+                    <div class="sidebar-brand-icon"><i class=""><img class="border rounded-0 mt-2"
+                                src="/assets/img/allion.jpg" height="50" alt="Ek Mutho Sodai"></i></div>
+                    <div class="sidebar-brand-text mx-3"><span>New Divine</span></div>
+                </a>
+                <hr class="sidebar-divider my-2">
+                <ul class="nav navbar-nav" id="accordionSidebar"
+                    style="margin-right: 0 !important; padding-right: 0rem !important;">
+                    <li class="nav-item"><a class="nav-link" href="productCL1.html"><i
+                                class="fas fa-box-open"></i>&nbsp;&nbsp;<span>Products</span></a></li>
+                    <li class="nav-item" style="padding-right: 0rem!important; margin-right: 0rem!important; ">
+                        <a class="nav-link collapsed" id="collapseA" data-toggle="collapse" href="#collapseList1"
+                            role="button" aria-expanded="false" aria-controls="collapseList1"><i
+                                class="fas fa-store"></i>&nbsp;&nbsp;<span>Shop</span>
+                        </a>
+                        <div class="collapse" id="collapseList1"
+                            style="padding-right: 0rem!important; margin-right: 0rem!important;  position: initial; transition: 0.5s;">
+                            <ul class="nav navbar-nav" style=" padding: 0rem!important;">
+                                <li class="nav-item" style=" list-style: none;">
+                                    <a class="nav-link link2" href="shopEntry.html"> <i
+                                            class="fas fa-cart-plus"></i>&nbsp;&nbsp;<span>Entry</span></a>
+                                </li>
+                                <li class="nav-item" style=" list-style: none;"><a class="nav-link link2"
+                                        href="shopPayment.html"><i class="fas fa-credit-card"></i>&nbsp;&nbsp;<span>
+                                            Payment
+                                        </span></a> </li>
+                                <li class="nav-item link2" style=" list-style: none;"><a class="nav-link" href=""><i
+                                            class="fas fa-box-open"></i>&nbsp;&nbsp;<span>Product Insertion
+                                        </span></a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="orderDetails.html"><i
+                                class="far fa-list-alt"></i>&nbsp;&nbsp;<span>Order</span></a></li>
+                    <li class="nav-item" style="padding-right: 0rem!important; margin-right: 0rem!important;">
+                        <a class="nav-link collapsed" id="collapseB" data-toggle="collapse" href="#collapseList2"
+                            role="button" aria-expanded="false" aria-controls="collapseList2"><i
+                                class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;<span>Location</span>
+                        </a>
+                        <div class="collapse" id="collapseList2"
+                            style="padding-right: 0rem!important; margin-right: 0rem!important;  position: initial; transition: 0.5s;">
+                            <ul class="nav navbar-nav" style=" padding: 0rem!important;">
+                                <li class="nav-item" style=" list-style: none;">
+                                    <a class="nav-link" href="shopEntryHierarchy.html"> <i
+                                            class="fa fa-sitemap"></i>&nbsp;&nbsp;<span>Set
+                                            Hierarchy</span></a>
+                                </li>
+                                <li class="nav-item" style=" list-style: none;"><a class="nav-link"
+                                        href="division.html"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;<span>Hierarchy
+                                            Details</span></a> </li>
+                                <!-- <li class="nav-item" style=" list-style: none;"> -->
+                                <!-- <a class="nav-link collapsed active" id="collapseC" data-toggle="collapse" href="#collapseList3" role="button" aria-expanded="false" aria-controls="collapseList3"><i
+                                            class="fas fa-list-alt"></i>&nbsp;&nbsp;<span>Categories</span>
+                                    </a>
+                                    <div class="collapse" id="collapseList3" style="padding-right: 0rem!important; margin-right: 0rem!important;  position: initial; transition: 0.5s;">
+                                        <ul class="nav navbar-nav" style=" padding: 0rem!important;">
+                                            <li class="nav-item" style=" list-style: none;">
+                                                <a class="nav-link active" href="division.html"> <i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;<span>Division</span></a>
+                                            </li>
+                                            <li class="nav-item" style=" list-style: none;"><a class="nav-link" href="district.html"><i
+                                                        class="fas fa-city"></i>&nbsp;&nbsp;<span>District
+                                                    </span></a>
+                                            </li>
+                                            <li class="nav-item" style=" list-style: none;">
+                                                <a class="nav-link" href="thana.html"> <i class="fas fa-building"></i>&nbsp;&nbsp;<span>Thana</span></a>
+                                            </li>
+                                            <li class="nav-item" style=" list-style: none;"><a class="nav-link" href="zipcode.html"><i
+                                                        class="fas fa-road"></i>&nbsp;&nbsp;<span>Zip Code
+                                                    </span></a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                <!-- </li> -->
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="deliveryDetails.html"><i
+                                class="fas fa-truck"></i>&nbsp;&nbsp;<span>Delivery</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="discountDetails.html"><i
+                                class="fas fa-tags"></i>&nbsp;&nbsp;<span>Discount</span></a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="fas fa-globe">
+                            </i>&nbsp;&nbsp;<span>Site</span></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href=""><i
+                                class="fas fa-user"></i>&nbsp;&nbsp;<span>User</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid">
+                        <button class="btn btn-link rounded-circle mr-3" data-bs-hover-animate="swing"
+                            id="sidebarToggleTop" type="button"><i class="fas fa-bars"
+                                style="color: black;"></i></button>
+                        <ul class="nav navbar-nav flex-nowrap ml-auto">
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
+                                        data-toggle="dropdown" aria-expanded="false" href="#"><span
+                                            class="d-none d-lg-inline mr-2 text-gray-900 font-weight-normal small">Mr.
+                                            Bob
+                                            Max</span><img class="border rounded-circle img-profile"
+                                            src="/assets/img/avatars/avatar4.jpeg"></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in">
+                                        <!-- <a class="dropdown-item" href="#"><i
+                                                class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a>
+                                        <div class="dropdown-divider"></div> -->
+                                        <a class="dropdown-item" href="#"><i
+                                                class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-black-bold"></i>&nbsp;Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3 bg-info">
+                            <h1>Personal Information</h1>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="container">
+                                <h4 class="my-0 fw-normal">Enter your Personal Information</h4>
+                                <form action="" id=storeForm method="post">
+                                    <div class="form-row my-3">
+                                        <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                                            <label for="">First Name</label>
+                                            <input type="text" id="National" class="form-control" required>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                                            <label for="">Last Name</label>
+                                            <input type="text" id="National" class="form-control" required>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                                            <label for="">Age</label>
+                                            <input type="text" id="National" class="form-control" required>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                                            <label for="">Mobile no</label>
+                                            <input type="text" id="National" class="form-control" required>
+                                        </div>
+                                        <form name="form1" id="form1" action="/action_page.php">
+                                            <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                                                <label for="">Country:</label>
+                                                <select class="w-100 form-select form-select-lg mb-3"
+                                                    aria-label=".form-select-lg example" name="subject" id="subject">
+                                                    <option value="" selected="selected">Select Country</option>
+                                                </select>
+                                            </div>
+                                            <br><br>
+                                            <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                                                <label for="">State/City:</label>
+                                                <select class="w-100 form-select form-select-lg mb-3"
+                                                    aria-label=".form-select-lg example" name="topic" id="topic">
+                                                    <option value="" selected="selected">Select State/City</option>
+                                                </select>
+                                            </div>
+                                            <br><br>
+                                            <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                                                <label for="">Topic:</label>
+                                                <select class=" w-100 form-select form-select-lg mb-3"
+                                                    aria-label=".form-select-lg example" name="chapter" id="chapter">
+                                                    <option value="" selected="selected">Select Topic</option>
+                                                </select>
+                                            </div>
+                                            <br><br>
+                                        </form>
+
+                                    </div>
+                                    <button class="float-center submit-button btn-lg btn-success">click me</button>
+                                    <button id="myButton" class="float-center submit-button btn-lg btn-default">Back to
+                                        home
+                                        page</button>
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <!-- <div class="card-header py-3 bg-secondary">
+                            <h1>Nominee 1 Information</h1>
+                        </div> -->
+
+                        <div class="card-body">
+                            <div class="container">
+                                <h4 class="my-0 fw-normal">Enter your Nominee 1 Information</h4>
+                            </div>
+
+                            <form action="" id=storeForm method="post">
+                                <div class="form-row my-3">
+                                    <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                                        <label for="">First Name</label>
+                                        <input type="text" id="National" class="form-control" required>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                                        <label for="">Last Name</label>
+                                        <input type="text" id="National" class="form-control" required>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                                        <label for="">Age</label>
+                                        <input type="text" id="National" class="form-control" required>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                                        <label for="">Mobile no</label>
+                                        <input type="text" id="National" class="form-control" required>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
+                                        <input type="button" value="Add Level 02"
+                                            class="btn bgbutton btn-primary mt-3 btn-lg" id="addtocart"
+                                            onkeypress="window.event.cancelBubble=true;"
+                                            onclick="window.open('application.html', 'application');"
+                                            style="display:inline-block; margin:0 0.3em 0.3em 0;width:9rem; background-color: black;">
+                                        </input>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <!-- <div class="card-header py-3 bg-secondary">
+                            <h1>Nominee 2 Information</h1>
+                        </div> -->
+
+                        <div class="card-body">
+                            <div class="container">
+                                <h4 class="my-0 fw-normal">Enter your Nominee 2 Information</h4>
+                            </div>
+
+                            <form action="" id=storeForm method="post">
+                                <div class="form-row my-3">
+                                    <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                                        <label for="">First Name</label>
+                                        <input type="text" id="National" class="form-control" required>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                                        <label for="">Last Name</label>
+                                        <input type="text" id="National" class="form-control" required>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                                        <label for="">Age</label>
+                                        <input type="text" id="National" class="form-control" required>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                                        <label for="">Mobile no</label>
+                                        <input type="text" id="National" class="form-control" required>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
+                                        <input type="button" value="Add Level 02"
+                                            class="btn bgbutton btn-primary mt-3 btn-lg" id="addtocart"
+                                            onkeypress="window.event.cancelBubble=true;"
+                                            onclick="window.open('application.html', 'application');"
+                                            style="display:inline-block; margin:0 0.3em 0.3em 0;width:9rem; background-color: black;">
+                                        </input>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js "></script>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
+            crossorigin="anonymous "></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js "></script>
+        <script src="/assets/js/script.min.js?h=af3a23ce326fbc8eb447b5418ddb619e "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js "
+            integrity="sha512-yDlE7vpGDP7o2eftkCiPZ+yuUyEcaBwoJoIhdXv71KZWugFqEphIS3PU60lEkFaz8RxaVsMpSvQxMBaKVwA5xg=="
+            crossorigin=" anonymous "></script>
+        <script type="text/javascript " charset="utf8 "
+            src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js "></script>
+
+
+        <script type="text/javascript">
+            document.getElementById("myButton").onclick = function () {
+                location.href = "index.html";
+            };
+
+            // document.getElementById("addtocart").onclick = function () {
+            //     location.href = "application.html";
+            // };
+
+            $(document).ready(function () {
+                $(".bgbutton").click(function () {
+                    window.location.replace = "application.html";
+                });
+            });
+
+            var subjectObject = {
+                "USA": {
+                    "Arizona": ["Angular", "Vue", "jQuery", "Next"],
+                    "New York": ["MySQL", "Oracle", "MSSQL", "PSSQL"],
+                    "California": ["Variables", "Operators", "Functions", "Conditions"]
+                },
+                "UK": {
+                    "Manchester": ["Java", "PHP", "Node"],
+                    "London": ["Laravel", "Ruby", "Django"]
+                }
+            }
+            window.onload = function () {
+                var subjectSel = document.getElementById("subject");
+                var topicSel = document.getElementById("topic");
+                var chapterSel = document.getElementById("chapter");
+                for (var x in subjectObject) {
+                    subjectSel.options[subjectSel.options.length] = new Option(x, x);
+                }
+                subjectSel.onchange = function () {
+                    //empty Chapters- and Topics- dropdowns
+                    chapterSel.length = 1;
+                    topicSel.length = 1;
+                    //display correct values
+                    for (var y in subjectObject[this.value]) {
+                        topicSel.options[topicSel.options.length] = new Option(y, y);
+                    }
+                }
+                topicSel.onchange = function () {
+                    //empty Chapters dropdown
+                    chapterSel.length = 1;
+                    //display correct values
+                    var z = subjectObject[subjectSel.value][this.value];
+                    for (var i = 0; i < z.length; i++) {
+                        chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
+                    }
+                }
+            }
+
+        </script>
+
+</body>
+
+</html>
